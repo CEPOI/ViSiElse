@@ -1,6 +1,4 @@
-^\.travis\.yml$
 ^.*\.Rproj$
-^\.Rproj\.user$
-^\.git$
-^\.travis\.yml$
-^README\.Rmd$
+^\.Rproj\.user$ 
+^README.md$
+^\.travis.yml$
