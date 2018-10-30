@@ -3,7 +3,7 @@ Type: Package
 Version: 1.2.1
 Title: A Visual Tool for Behaviour Analysis
 Authors@R: c(
-    person("Nastasia", "Fouret", , "mail@test.fr", c("aut", "cph")),
+    person("Nastasia", "Fouret", , "nastasia.fouret@gmail.com", c("aut", "cph")),
     person( "Mederic", "Descoins", , "mederic.descoins@chu-reunion.fr", role=, c("aut", "cph")),
     person("Elodie", "Garnier", , "elodie.garnier@chu-reunion.fr", c("aut", "cre", "cph")),
     person( "CEPOI - EA 7388", role="cph" )
