@@ -18,7 +18,7 @@
 \arguments{
 \item{x}{A \code{ViSigrid} object built using the \code{\link{visielse}} function.}
 
-\item{scal.unit.tps}{Unity of time for the Grey grid legend.}
+\item{scal.unit.tps}{Unity of time for the grey grid legend.}
 
 \item{unit.tps}{Unit of time (s,min,..).}
 

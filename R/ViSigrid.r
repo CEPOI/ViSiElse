@@ -10,7 +10,7 @@
 #' @slot L A \code{"data.frame"} It stores the data corresponding to long actions having a showorder. 
 #' @slot idsort A \code{"matrix"} For all long actions, it stores the order of individuals in which each actions will be plot. 
 #' @slot BZL A \code{"dgCMatrix"} It stores black zones for long actions, calculated for each individuals. 
-#' @slot Lsup A \code{"data.frame"} for the long actions having  a showorder and suplementary times defined, it 
+#' @slot Lsup A \code{"data.frame"} for the long actions having  a showorder and supplementary times defined, it 
 #' stores the data corresponding to those actions. 
 #' @slot book A \code{"ViSibook"} it stores the structure of the grid for the plot. 
 #' @slot group A \code{"factor"} it stores the group for the each individuals. 

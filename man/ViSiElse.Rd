@@ -159,7 +159,7 @@ be drawn, and for punctual actions black and green zones will not be translated.
 
 }
 
-x can also have the columns : GZDebn,  GZFin, Repetition, BZBeforeDeb, BZBeforeFin, BZAfterDeb, BZAfterFin, BZLong , BZLtype
+x can also has the columns : GZDebn,  GZFin, Repetition, BZBeforeDeb, BZBeforeFin, BZAfterDeb, BZAfterFin, BZLong , BZLtype
 }
 \examples{
 coffee <- c(  58, 11,  5, 53, 53, 59, 24, 59, 46, 20)

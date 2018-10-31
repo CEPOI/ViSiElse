@@ -16,7 +16,7 @@
 
 \item{label}{a vector. storing brief description of actions.}
 
-\item{typeA}{Vector storing type of actions, "l" for long actions, "p" for punctual.}
+\item{typeA}{Vector storing type of actions, "l" for long actions, "p" for punctuals.}
 
 \item{showorder}{vector storing order in which actions will be plotted, is an actions is not to be plot its showorder is "NA".}
 
@@ -24,7 +24,7 @@
 
 \item{fin}{Vector storing, for long actions, the punctual action that corresponds to its end.}
 
-\item{GZDeb}{Vector storing punctual actions green zone starting time.}
+\item{GZDeb}{Vector storing punctuals actions green zone starting time.}
 
 \item{GZFin}{Vector storing punctual action green zone ending time.}
 

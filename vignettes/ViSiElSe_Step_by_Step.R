@@ -103,5 +103,5 @@ visi1 <- visielse( X,group=group, book=book ,informer = NULL, method = "join")
 
 ## ----fig.show='asis',fig.width=7, fig.height=5, warning=FALSE------------
 group <- c( "group2","group1","group2","group1","group1","group2","group1","group1","group1","group2")
-visi1 <- visielse( X,group=group, book=book ,informer = NULL, method = "within",grwithin = "group1")
+visi1 <- visielse( X,group=group, book=book ,informer = NULL, method = "within", grwithin = "group1")
 

@@ -1,5 +1,5 @@
 #' \code{visielse} plots the graphic from data and build an object class
-#' \code{ViSigrid} with at least data of times of individual realisation
+#' \code{ViSigrid} with at least data of times of individual execution
 #' for each punctual action defined in the \code{ViSibook}.
 #' @name visielse
 #' @title Function \code{visielse}
@@ -20,7 +20,7 @@
 #' @param group A \code{factor} with two \code{levels}.
 #' \code{group} indicates the group attributed to the individuals,
 #' it has same the length as the number of rows of \code{X}.
-#' @param Xsup  A \code{data.frame} or \code{matrix} storing supplementary time data,  \strong{all indivuals in}  \code{Xsup}  \strong{must be in } \code{X}.
+#' @param Xsup  A \code{data.frame} or \code{matrix} storing supplementary time data,  \strong{all individuals in}  \code{Xsup}  \strong{must be in } \code{X}.
 #' @param method   In \{ \code{"global"} ,  \code{"cut"} ,  \code{"join"} , \code{"within"} \}.
 #' \code{method} specifies the plotting method, see \code{details}. If \code{group} is \code{NULL},
 #'  \code{method} is set to \code{"global"}.
@@ -51,9 +51,9 @@
 #' @param decrgr2  A boolean. When sorted.line is TRUE and decrgr2 is TRUE, long actions of the second group are plotted in decreasing order by starting times.
 #' @param sorted.line  A boolean.
 #' When \code{sorted.line} is \code{TRUE}, it allows long actions to be sorted by starting time.
-#' @param times  A boolean. If \code{times} is \code{TRUE}, it incidicates that \code{X} contains data in a time format.
+#' @param times  A boolean. If \code{times} is \code{TRUE}, it indicates that \code{X} contains data in a time format.
 #' @param timeformat  time format.  If \code{times} is \code{TRUE}.
-#' @param idsubject  An integer betweem 1 and \code{dim(X)[2]}.  \code{idsubject} indicates the
+#' @param idsubject  An integer between 1 and \code{dim(X)[2]}.  \code{idsubject} indicates the
 #' number of the column of X that contains individuals id numbers.
 #' @param colvect   A \code{matrix} containing colors.
 #'  Colors are automatically computed if \code{colvect} is \code{NULL}.
@@ -87,7 +87,7 @@
 #'
 #' When plotting the \code{\linkS4class{ViSigrid}} object, indicators for a punctual action are represented by
 #' white circles linked by a line. For long action, only a black line is plotted from
-#' the median (or mean) of the punctal action staring it. The line length represents
+#' the median (or mean) of the punctual action staring it. The line length represents
 #' the median (or mean) of the long action duration.
 #' Informers are computed directly on the given matrix for punctual action.
 #' And for a long action it is calculated on the difference between the beginning punctual action and the ending one.
@@ -125,7 +125,7 @@
 #'
 #' }
 #'
-#' @details x can also has the colunms : GZDebn,  GZFin, Repetition, BZBeforeDeb, BZBeforeFin, BZAfterDeb, BZAfterFin, BZLong , BZLtype
+#' @details x can also has the columns : GZDebn,  GZFin, Repetition, BZBeforeDeb, BZBeforeFin, BZAfterDeb, BZAfterFin, BZLong , BZLtype
 #' @seealso Classes \code{\linkS4class{ViSigrid}} and \code{\linkS4class{ViSibook}}.
 #'  The method plot for ViSigrid object \code{\link{plot-ViSigrid-method}} for examples.
 #'

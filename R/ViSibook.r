@@ -93,7 +93,7 @@ NULL
 #' @slot BZBeforeFin a vector, optional, \code{BZBeforeFin} storing punctual black zone 1 ending time.
 #' @slot BZAfterDeb a vector, optional, \code{BZAfterDeb} stores punctual black zone 2 starting time .
 #' @slot BZAfterFin a vector, optional, \code{BZAfterFin} stores punctual black zone 2 ending time.
-#' @slot BZLong a vector, optional, \code{BZLong} stores the long action black zome time.
+#' @slot BZLong a vector, optional, \code{BZLong} stores the long action black zone time.
 #' @slot BZLtype a vector, optional, \code{BZLtype} stores the type of the black zone,
 #'  "time" if the action should be finish at a time, "span" if the action should be finish in a time.
 #' @slot NAMES a vector storing names of slots that are to be defined.
