@@ -12,7 +12,7 @@
 #' @param scal.unit.tps Unity of time for the grey grid legend.
 #' @param unit.tps Unit of time (s,min,..).
 #' @param Fontsize.label.Action Fontsize of labels of plotted actions.
-#' @param Fontsize.label.Time Fontsize of the time axe.
+#' @param Fontsize.label.Time Fontsize of the time axis.
 #' @param Fontsize.label.color  Fontsize of legends.
 #' @param Fontsize.title Fontsize of the title.
 #' @param colgreenzone Color of the green zones.
@@ -130,7 +130,7 @@ setMethod( f = "plot",
               grid::upViewport() # Out of the line of action
               grid::upViewport() # Out of the cadre
              #################################################### Legends ###################################################
-             #Legend Axe Y + title
+             #Legend Y axis + title
               legend_action( book = book ,main = main ,  size.main = size.main ,  Fontsize.title = Fontsize.title ,
                                              Fontsize.label.Action = Fontsize.label.Action,
                                              col.main = col.main, ncharlabel=ncharlabel,

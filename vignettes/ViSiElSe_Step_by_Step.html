@@ -12,7 +12,7 @@
 
 <meta name="author" content="Nastasia Fouret" />
 
-<meta name="date" content="2018-10-30" />
+<meta name="date" content="2018-10-31" />
 
 <title>ViSiElSe Step by Step</title>
 
@@ -70,13 +70,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">ViSiElSe Step by Step</h1>
 <h4 class="author"><em>Nastasia Fouret</em></h4>
-<h4 class="date"><em>2018-10-30</em></h4>
+<h4 class="date"><em>2018-10-31</em></h4>
 
 
 
 <div id="few-words-about-visielse" class="section level2">
 <h2>Few words about ViSiElse</h2>
-<p>VisiElse is a graphical tool designed to visualize and to give an overview of behavioural observations realized on individuals and/or groups. ViSiElse allows visualization of raw data extracted from experimental observations (behavioral studies). For example during the realization of a procedure like a medical algorithm. It graphically presents an overview of individuals and group actions usually acquired from timestamps during video recorded sessions. Options of the package allow adding graphical information as statistical indicators (mean, standard deviation, quantiles or statistical tests) but also for each action green or black zones providing visual information about the accuracy of the realized actions.</p>
+<p>ViSiElse is a graphical tool designed to visualize and to give an overview of behavioral observations realized on individuals and/or groups. ViSiElse allows visualization of raw data extracted from experimental observations (behavioral studies). For example during the realization of a procedure like a medical algorithm. It graphically presents an overview of individuals and group actions usually acquired from timestamps during video recorded sessions. Options of the package allow adding graphical information as statistical indicators (mean, standard deviation, quantiles or statistical tests) but also for each action green or black zones providing visual information about the accuracy of the realized actions.</p>
 </div>
 <div id="a-step-by-step-example" class="section level1">
 <h1>A step by step example</h1>
@@ -85,8 +85,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>The process : Making coffee</h2>
 <p>The process underlying making coffee corresponds to a 5 steps procedure.</p>
 <ul>
-<li>1- Taking the coffee (named “coffe”)</li>
-<li>2- Fill the machine with coffee (named “fill_coffe”)</li>
+<li>1- Taking the coffee (named “coffee”)</li>
+<li>2- Fill the machine with coffee (named “fill_coffee”)</li>
 <li>3- Fill the tank with water (named “fill_water”)</li>
 <li>4- Push the Button (named “push-B”)</li>
 <li>5- Drink the coffee (named “drink”)</li>
@@ -160,7 +160,7 @@ X &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="
 </div>
 <div id="the-visibook" class="section level2">
 <h2>The ViSibook</h2>
-<p>The ViSibook is an object containing informations on the studied behavioral process whereas the dataset contains its realizations. This ViSibook contains the structure of the behavioral process: list of actions composing it, constraints of times… When it is not manually defined, the function visielse computes the ViSibook associated this the dataset assuming the process is the ordered list of punctual actions given by the dataset’s columns names. Also, it is possible to extract the ViSibook from an execution of the visielse function.</p>
+<p>The ViSibook is an object containing informations on the studied behavioral process whereas the dataset contains its realizations. This ViSibook contains the structure of the behavioral process: list of actions composing it, constraints of times… When it is not manually defined, the function visielse computes the ViSibook associated this the dataset assuming the process is the ordered list of punctual actions given by the dataset columns names. Also, it is possible to extract the ViSibook from an execution of the visielse function.</p>
 <div id="extraction-of-the-visibook-from-the-data" class="section level3">
 <h3>Extraction of the ViSibook from the data</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">visi1 &lt;-<span class="st"> </span><span class="kw">visielse</span>(X,<span class="dt">informer =</span> <span class="ot">NULL</span>, <span class="dt">doplot =</span> <span class="ot">FALSE</span>)
@@ -172,7 +172,7 @@ book &lt;-<span class="st"> </span>visi1<span class="op">@</span>book
 <div id="structure-of-a-visibook" class="section level3">
 <h3>Structure of a ViSibook</h3>
 <p>A ViSibook is a class of object, and it must follow structural rules. Basically it is a data.frame with particular columns. The <strong>minimum structure for a ViSibook</strong> must give for <strong>each action</strong> its <strong>name</strong> (without special characters but &quot; _ &quot; ), its <strong>label</strong>, its <strong>type</strong> (punctual or long), its <strong>order in the behavioral process</strong>, and two other information “deb” and “fin”, that should not be specified for punctual actions.</p>
-<p>Explations about how to deal with “deb” and “fin” will be given later.</p>
+<p>Explanations about how to deal with “deb” and “fin” will be given later.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">book</code></pre></div>
 <pre><code>##      vars          label         typeA showorder deb fin
 ## [1,] &quot;coffee&quot;      &quot;coffee&quot;      &quot;p&quot;   &quot;1&quot;       NA  NA 
@@ -217,7 +217,7 @@ book</code></pre></div>
 <div id="long-actions" class="section level2">
 <h2>Long Actions</h2>
 <p>Until now we had only considered punctual actions. However ViSiElse considers two different types of actions: <strong>punctual and long</strong>. The actions called punctual are brief actions defined as time points, like “Push the button”.</p>
-<p>The actions called long (or delays) are the ones defined by a <strong>duration</strong>. Delays or long actions can be helpful to understand a behavioral process. They are characterized by both <strong>a beginning punctual action and an ending one</strong>. To define a long action there is no need to change the dataset, only to add a line in the visibook. The slot typeA in the visibook specifies if the action is punctual (“p”) or long (“l”).</p>
+<p>The actions called long (or delays) are the ones defined by a <strong>duration</strong>. Delays or long actions can be helpful to understand a behavioral process. They are characterized by both <strong>a beginning punctual action and an ending one</strong>. To define a long action there is no need to change the dataset, only to add a line in the ViSibook. The slot typeA in the ViSibook specifies if the action is punctual (“p”) or long (“l”).</p>
 <div id="adding-a-long-actions" class="section level4">
 <h4>Adding a long Actions</h4>
 <p>Let’s add an action measuring the time between filling the machine with coffee and pushing the button. For that, we convert the ViSibook into a data.frame and add a line for the new action.</p>
@@ -244,8 +244,8 @@ book</code></pre></div>
 </div>
 <div id="green-black-zones" class="section level2">
 <h2>Green &amp; Black zones</h2>
-<div id="punctuals-actions" class="section level3">
-<h3>Punctuals actions</h3>
+<div id="punctual-actions" class="section level3">
+<h3>Punctual actions</h3>
 <p>Green and black zone are introduced to help visualize time boundaries. To define green and black zone for punctual actions we will add the columns :</p>
 <ul>
 <li>Green Zone: GZDeb and GZFin.</li>

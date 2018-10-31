@@ -27,7 +27,7 @@ Optionally other characteristics can be filled : \strong{GZDebn,  GZFin, Repetit
 
 \item{doplot}{A logical If \code{FALSE} the graphic is not plotted.}
 
-\item{Xsup}{A \code{data.frame} or \code{matrix} storing supplementary time data,  \strong{all indivuals in}  \code{Xsup}  \strong{must be in } \code{X}.}
+\item{Xsup}{A \code{data.frame} or \code{matrix} storing supplementary time data,  \strong{all individuals in}  \code{Xsup}  \strong{must be in } \code{X}.}
 
 \item{method}{In \{ \code{"global"} ,  \code{"cut"} ,  \code{"join"} , \code{"within"} \}.
 \code{method} specifies the plotting method, see \code{details}. If \code{group} is \code{NULL},
@@ -81,11 +81,11 @@ If \code{group} is not \code{NULL} colvect should have two rows otherwise one.}
 \code{ncolvect} indicates the number of columns of \code{colvect}. Its default setting is \code{dim(X)[1]}.
 \code{ncolvect} is considered only if \code{colvect} is \code{NULL}.}
 
-\item{times}{A boolean. If \code{times} is \code{TRUE}, it incidicates that \code{X} contains data in a time format.}
+\item{times}{A boolean. If \code{times} is \code{TRUE}, it indicates that \code{X} contains data in a time format.}
 
 \item{timeformat}{time format.  If \code{times} is \code{TRUE}.}
 
-\item{idsubject}{An integer betweem 1 and \code{dim(X)[2]}.  \code{idsubject} indicates the
+\item{idsubject}{An integer between 1 and \code{dim(X)[2]}.  \code{idsubject} indicates the
 number of the column of X that contains individuals id numbers.}
 }
 \value{
@@ -93,7 +93,7 @@ a ViSigrid object.
 }
 \description{
 \code{visielse} plots the graphic from data and build an object class
-\code{ViSigrid} with at least data of times of individual realisation
+\code{ViSigrid} with at least data of times of individual execution
 for each punctual action defined in the \code{ViSibook}.
 }
 \details{
@@ -121,7 +121,7 @@ within is chosen.
 
 When plotting the \code{\linkS4class{ViSigrid}} object, indicators for a punctual action are represented by
 white circles linked by a line. For long action, only a black line is plotted from
-the median (or mean) of the punctal action staring it. The line length represents
+the median (or mean) of the punctual action staring it. The line length represents
 the median (or mean) of the long action duration.
 Informers are computed directly on the given matrix for punctual action.
 And for a long action it is calculated on the difference between the beginning punctual action and the ending one.
@@ -159,7 +159,7 @@ be drawn, and for punctual actions black and green zones will not be translated.
 
 }
 
-x can also has the colunms : GZDebn,  GZFin, Repetition, BZBeforeDeb, BZBeforeFin, BZAfterDeb, BZAfterFin, BZLong , BZLtype
+x can also have the columns : GZDebn,  GZFin, Repetition, BZBeforeDeb, BZBeforeFin, BZAfterDeb, BZAfterFin, BZLong , BZLtype
 }
 \examples{
 coffee <- c(  58, 11,  5, 53, 53, 59, 24, 59, 46, 20)

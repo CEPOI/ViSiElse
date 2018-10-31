@@ -45,7 +45,7 @@ Class \code{ViSibook} defines the structure of the process to be plotted.
 
 \item{\code{BZAfterFin}}{a vector, optional, \code{BZAfterFin} stores punctual black zone 2 ending time.}
 
-\item{\code{BZLong}}{a vector, optional, \code{BZLong} stores the long action black zome time.}
+\item{\code{BZLong}}{a vector, optional, \code{BZLong} stores the long action black zone time.}
 
 \item{\code{BZLtype}}{a vector, optional, \code{BZLtype} stores the type of the black zone,
 "time" if the action should be finish at a time, "span" if the action should be finish in a time.}

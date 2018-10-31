@@ -18,7 +18,7 @@
 \arguments{
 \item{x}{A \code{ViSigrid} object built using the \code{\link{visielse}} function.}
 
-\item{scal.unit.tps}{Unity of time for the grey grid legend.}
+\item{scal.unit.tps}{Unity of time for the Grey grid legend.}
 
 \item{unit.tps}{Unit of time (s,min,..).}
 
@@ -32,7 +32,7 @@
 
 \item{Fontsize.label.Action}{Fontsize of labels of plotted actions.}
 
-\item{Fontsize.label.Time}{Fontsize of the time axe.}
+\item{Fontsize.label.Time}{Fontsize of the time axis.}
 
 \item{Fontsize.label.color}{Fontsize of legends.}
 

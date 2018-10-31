@@ -1,14 +1,14 @@
 Package: ViSiElse
 Type: Package
 Version: 1.2.1
-Title: A Visual Tool for Behaviour Analysis
+Title: A Visual Tool for Behavior Analysis
 Authors@R: c(
     person("Nastasia", "Fouret", , "nastasia.fouret@gmail.com", c("aut", "cph")),
     person( "Mederic", "Descoins", , "mederic.descoins@chu-reunion.fr", role=, c("aut", "cph")),
     person("Elodie", "Garnier", , "elodie.garnier@chu-reunion.fr", c("aut", "cre", "cph")),
     person( "CEPOI - EA 7388", role="cph" )
     )  
-Description: A graphical tool designed to visualize and to give an overview of behavioural observations realized on individuals or groups. Visualization of raw data during experimental observations of the realization of a procedure. It graphically presents an overview of individuals and group actions usually acquired from timestamps during video recorded sessions. Options of the package allow adding graphical information as statistical indicators (mean, standard deviation, quantile or statistical test) but also for each action green or black zones providing visual information about the accuracy of the realized actions.
+Description: A graphical tool designed to visualize and to give an overview of behavioral observations realized on individuals or groups. Visualization of raw data during experimental observations of the realization of a procedure. It graphically presents an overview of individuals and group actions usually acquired from timestamps during video recorded sessions. Options of the package allow adding graphical information as statistical indicators (mean, standard deviation, quantile or statistical test) but also for each action green or black zones providing visual information about the accuracy of the realized actions.
 URL: https://github.com/CEPOI/ViSiElse
 Author: Nastasia Fouret [aut, cph],
     Mederic Descoins [aut, cph],

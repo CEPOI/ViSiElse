@@ -231,7 +231,7 @@ visielse <- function(X , book=NULL, is.ViSibook=FALSE, doplot =TRUE , Xsup = NUL
            X <- X[ , match(append(methods::slot( book , "vars" )[ which( methods::slot( book , "typeA" ) == "p" ) ], colnames(X)[1], after = 0), colnames(X))]
                     }
           }
-  # A data.frame containing the times performances for punctuals actions, colnames( X ) must corresponds to names given in the book in the slot vars
+  # A data.frame containing the times performances for punctual actions, colnames( X ) must corresponds to names given in the book in the slot vars
   ### Verification group if method !="global"
   if (method != "global" ) {
     if (is.null( group ) ) {
@@ -293,7 +293,7 @@ visielse <- function(X , book=NULL, is.ViSibook=FALSE, doplot =TRUE , Xsup = NUL
     }
   }
 #...................................................................................................................................................................................................................
-  ### informers Punctuals action
+  ### informers Punctual action
   if (is.null( informer ) == FALSE ) {
     if (method == "join" || method == "global" ) {
       if (informer == "mean") {
@@ -333,7 +333,7 @@ visielse <- function(X , book=NULL, is.ViSibook=FALSE, doplot =TRUE , Xsup = NUL
     informers <- new( "matrix" )
   )
   #...................................................................................................................................................................................................................
-  ################# Tests Punctuals Actions
+  ################# Tests Punctual Actions
   if (tests == TRUE & method != "global" & is.null( informer ) == FALSE  ) {
     if (informer == "mean") {
       testsP <- apply( X[ , -idsubject ] , MARGIN = 2 , FUN = function(x ) { stats::wilcox.test( x[ which( group == levels( group )[ 1 ] ) ] , x[ which( group == levels( group )[ 2 ] ) ] )$p.value } ) < threshold.test

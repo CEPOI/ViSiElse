@@ -15,5 +15,5 @@ ViSibookfromDATA(X, idsubject = 1)
 a ViSibook corresponding to the dataset X.
 }
 \description{
-\code{ViSibookfromDATA} build an object class ViSiBook from observational datas. The process is the ordered list of punctual actions given by the columns names of X.
+\code{ViSibookfromDATA} build an object class ViSibook from observational data. The process is the ordered list of punctual actions given by the columns names of X.
 }

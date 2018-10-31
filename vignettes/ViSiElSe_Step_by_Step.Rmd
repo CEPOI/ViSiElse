@@ -12,27 +12,27 @@ vignette: >
 ---
 title: "ViSiElSe Step by Step"
 author: "Nastasia Fouret"
-date: "1 août 2016"
+date: "1st august 2016"
 output: word_document
 ---
 
 ## Few words about ViSiElse
 
-VisiElse is a graphical tool designed to visualize and to give an overview of behavioural observations realized on individuals and/or groups. ViSiElse allows visualization of raw data extracted from experimental observations (behavioral studies). For example during the realization of a procedure like a medical algorithm. It graphically presents an overview of individuals and group actions usually acquired from timestamps during video recorded sessions. Options of the package allow adding graphical information as statistical indicators (mean, standard deviation, quantiles or statistical tests) but also for each action green or black zones providing visual information about the accuracy of the realized actions.
+ViSiElse is a graphical tool designed to visualize and to give an overview of behavioral observations realized on individuals and/or groups. ViSiElse allows visualization of raw data extracted from experimental observations (behavioral studies). For example during the realization of a procedure like a medical algorithm. It graphically presents an overview of individuals and group actions usually acquired from timestamps during video recorded sessions. Options of the package allow adding graphical information as statistical indicators (mean, standard deviation, quantiles or statistical tests) but also for each action green or black zones providing visual information about the accuracy of the realized actions.
 
 # A step by step example 
 
-Let’s say we want to look at people making coffee. On the basis of this simple example everybody could experience, we are presenting how to create the corresponding simulated data in order to provide a simple and clear overview of this package.
+Let's say we want to look at people making coffee. On the basis of this simple example everybody could experience, we are presenting how to create the corresponding simulated data in order to provide a simple and clear overview of this package.
 
 ## The process : Making coffee
 
 The process underlying making coffee corresponds to a 5 steps procedure.
 
-  * 1- Taking the coffee (named “coffe”)
-  * 2- Fill the machine with coffee (named “fill_coffe”)
-  * 3- Fill the tank with water (named “fill_water”)
-  * 4- Push the Button (named “push-B”)
-  * 5- Drink the coffee (named “drink”)
+  * 1- Taking the coffee (named "coffee")
+  * 2- Fill the machine with coffee (named "fill_coffee")
+  * 3- Fill the tank with water (named "fill_water")
+  * 4- Push the Button (named "push-B")
+  * 5- Drink the coffee (named "drink")
 
 All those actions are defined as punctual.
 
@@ -102,8 +102,8 @@ visi1 <- visielse(X,informer = NULL)
 
 ## The ViSibook
 
-The ViSibook is an object containing informations on the studied behavioral process whereas the dataset contains its realizations. This ViSibook contains the structure of the behavioral process: list of actions composing it, constraints of times…
-When it is not manually defined, the function visielse computes the ViSibook associated this the dataset assuming the process is the ordered list of punctual actions given by the dataset's columns names. Also, it is possible to extract the ViSibook from an execution of the visielse function.
+The ViSibook is an object containing informations on the studied behavioral process whereas the dataset contains its realizations. This ViSibook contains the structure of the behavioral process: list of actions composing it, constraints of times...
+When it is not manually defined, the function visielse computes the ViSibook associated this the dataset assuming the process is the ordered list of punctual actions given by the dataset columns names. Also, it is possible to extract the ViSibook from an execution of the visielse function.
 
 ### Extraction of the ViSibook from the data
 ```{r,fig.width=7, fig.height=3.5}
@@ -117,10 +117,10 @@ The ViSibook obtained orders action as they appear in the dataset X.
 ### Structure of a ViSibook
 
 A ViSibook is a class of object, and it must follow structural rules. Basically it is a data.frame with particular columns.
-The __minimum structure for a ViSibook__ must give for __each action__ its __name__ (without special characters but " _ " ), its __label__, its __type__ (punctual or long), its __order in the behavioral process__, and two other information “deb” and “fin”, that should not be specified for punctual actions.
+The __minimum structure for a ViSibook__ must give for __each action__ its __name__ (without special characters but " _ " ), its __label__, its __type__ (punctual or long), its __order in the behavioral process__, and two other information "deb" and "fin", that should not be specified for punctual actions.
 
 
-Explations about how to deal with "deb" and "fin" will be given later.  
+Explanations about how to deal with "deb" and "fin" will be given later.  
 
 
 ```{r,fig.show='asis',fig.width=7, fig.height=5, warning=FALSE}
@@ -144,7 +144,7 @@ visi1 <- visielse(X, book=book, is.ViSibook = TRUE,informer = NULL)
 
 
 ### Order of Actions in the process
-As explained above, the order is given by “showorder”. It is the order by which actions are supposed to happen. As long as an order is set, it does not affect calculation, it only change where it is plotted.
+As explained above, the order is given by "showorder". It is the order by which actions are supposed to happen. As long as an order is set, it does not affect calculation, it only change where it is plotted.
 
 #### Change the order
 ```{r,fig.show='asis',fig.width=7, fig.height=5, warning=FALSE}
@@ -156,14 +156,14 @@ visi1 <- visielse(X, book=book, is.ViSibook = TRUE)
 
 ## Long Actions
 
-Until now we had only considered punctual actions. However ViSiElse considers two different types of actions: __punctual and long__. The actions called punctual are brief actions defined as time points, like “Push the button”. 
+Until now we had only considered punctual actions. However ViSiElse considers two different types of actions: __punctual and long__. The actions called punctual are brief actions defined as time points, like "Push the button". 
 
-The actions called long (or delays) are the ones defined by a __duration__. Delays or long actions can be helpful to understand a behavioral process. They are characterized by both __a beginning punctual action and an ending one__. To define a long action there is no need to change the dataset, only to add a line in the visibook. The slot typeA in the visibook specifies if the action is punctual (“p”) or long (“l”).
+The actions called long (or delays) are the ones defined by a __duration__. Delays or long actions can be helpful to understand a behavioral process. They are characterized by both __a beginning punctual action and an ending one__. To define a long action there is no need to change the dataset, only to add a line in the ViSibook. The slot typeA in the ViSibook specifies if the action is punctual ("p") or long ("l").
 
 
 #### Adding a long Actions
 
-Let’s add an action measuring the time between filling the machine with coffee and pushing the button. For that, we convert the ViSibook into a data.frame and add a line for the new action.
+Let's add an action measuring the time between filling the machine with coffee and pushing the button. For that, we convert the ViSibook into a data.frame and add a line for the new action.
 
 ```{r,fig.show='asis',fig.width=7, fig.height=5, warning=FALSE}
 visi1 <- visielse( X )
@@ -184,7 +184,7 @@ visi2 <- visielse( X=X , book=book,informer=NULL)
 
 ## Green & Black zones 
 
-### Punctuals actions
+### Punctual actions
 
   Green and black zone are introduced to help visualize time boundaries. To define green and black zone for punctual actions we will add the columns :
   
@@ -262,9 +262,9 @@ It might be useful to distinguish groups in the drawing. To define two groups yo
 
 ViSiElse proposes three methods to plot two groups:
 
-   * Each groups is represented one under the other with different colors : “cut”
-   * Groups are spatially mixed but they are represented by different colors : “join”
-   * All individuals executions are represented and under executions of the selected group : “within”
+   * Each groups is represented one under the other with different colors : "cut"
+   * Groups are spatially mixed but they are represented by different colors : "join"
+   * All individuals executions are represented and under executions of the selected group : "within"
 
 ### Method : Cut
 Each groups is represented one under the other.
