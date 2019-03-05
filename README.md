@@ -16,7 +16,10 @@ ViSiElse 1.2.1 (R package) is a visual tool for behaviour analysis.
 
 To get the current released version from CRAN:
 
-*Coming soon.*
+```R
+install.packages("ViSiElse")
+library(ViSiElse)
+```
 
 To get the current development version from github:
 
@@ -24,3 +27,7 @@ To get the current development version from github:
 # install.packages("devtools")
 devtools::install_github("CEPOI/ViSiElse")
 ```
+
+## Example
+
+Find an example of ViSiElse graph in the Example folder.
