@@ -1,7 +1,7 @@
 ################################################################################
 #                                                                              #
 #         ViSiElse: An innovative visualization R package to ensure            #
-#             behavioral raw data transparency and reliability                 #
+#             behavioral raw data reliability and transparency                 #
 #           Elodie M. Garnier, Nastasia Fouret, Mederic Descoins               #
 #                                                                              #
 ################################################################################
@@ -9,7 +9,7 @@
 
 # This is the code to replicate the analyses and figures from the 2019 paper :
 # ViSiElse: An innovative visualization R package to ensure behavioral raw data 
-# transparency and reliability, based on the data file 
+# reliability and transparency, based on the data file 
 # ViSiElse_intubation_data.csv
 
 # Correspondence concerning this code should be addressed to Elodie Garnier,
@@ -32,7 +32,8 @@ rm(list=ls())
 # You can now execute all R code below.
 path_data <- getwd()
 
-# Load ViSiElse package
+# Install and load ViSiElse package
+install.packages("ViSiElse", dependencies = T)
 library(ViSiElse)
 
 
@@ -212,7 +213,5 @@ plot(v1, main = "Intubation process", size.main = 16, col.main = "red",
 
 
 # For more information see help("visielse") #
-
-
 
 
