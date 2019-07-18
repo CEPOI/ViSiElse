@@ -28,6 +28,14 @@ To get the current development version from github:
 devtools::install_github("CEPOI/ViSiElse")
 ```
 
+
 ## Example
 
-Find an example of ViSiElse graph in the Example folder.
+Find examples (and R code) of ViSiElse graph in the Example folder.
+
+
+## Feedback and bugs report
+
+Don't hesitate to give us feedback about the package or the features you would like to be added or developed. You can reach us by e-mail : e.garnier30@gmail.com.
+
+To report bugs, see : https://github.com/CEPOI/ViSiElse/issues
