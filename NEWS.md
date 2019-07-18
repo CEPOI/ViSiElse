@@ -10,8 +10,10 @@ ViSiElse 1.2.1 (R package) is a visual tool for behaviour analysis.
 
 ## ViSiElse paper
 
-* Intubation example from the "ViSiElse: An innovative visualization R package 
-to ensure behavioral raw data transparency and reliability" paper
+* The paper "ViSiElse: An innovative visualization R package 
+to ensure behavioral raw data transparency and reliability" explains how to use
+ViSiElse package with different examples
 
-* Visit the Github /Example repository to find the intubation data example
-(ViSiElse_intubation_data.csv) and the associated R code (ViSiElse_intubation_R_code.R)
+* Visit the Github /Example folder to find the example datasets (typical day,
+intubation and online shopping) and the associated R code to run the examples
+(ViSiElse_intubation_R_code.R)
